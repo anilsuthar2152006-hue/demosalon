@@ -6,7 +6,16 @@ html {
 }
 
 /* MOBILE STICKY FIX — force header and bottom nav to always stay viewport-fixed */
-header.mobile-sticky-header,
+/* NOTE: header needs translateX(-50%) combined with translateZ(0) for centering + GPU layer */
+header.mobile-sticky-header {
+    position: fixed !important;
+    will-change: transform;
+    transform: translateX(-50%) translateZ(0) !important;
+    -webkit-transform: translateX(-50%) translateZ(0) !important;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
 .mobile-bottom-nav,
 #draggableCallBtn {
     position: fixed !important;
