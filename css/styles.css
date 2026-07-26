@@ -47,8 +47,8 @@ body {
 
 body.page-loaded {
     opacity: 1;
-    filter: blur(0px);
-    transform: scale(1);
+    filter: none;
+    transform: none;
 }
 
 body.page-exiting {
