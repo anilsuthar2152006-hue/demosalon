@@ -341,3 +341,15 @@ body.page-exiting {
 .lightbox-modal.is-open .lightbox-content {
     transform: scale(1);
 }
+
+/* ── Mobile Scroll Clearance ───────────────────────────────────────────────
+   Adds padding-bottom on mobile so the last element on every page can scroll
+   fully above the fixed bottom nav bar, plus ~1cm (38px) extra clearance.
+   Bottom nav height ≈ 80px  +  header pill ≈ 64px  +  1cm extra ≈ 38px
+   Total safe bottom padding: 120px (nav) + 38px (extra) = ~158px
+   ──────────────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 158px;
+    }
+}
