@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => scrollObserver.observe(el));
     }
 
-    // 4. Parallax Hero Card & Mouse Movements
+    // 4. Parallax Hero Card & Mouse Movements (Background image stays fixed)
     const heroCard = document.getElementById('hero-card') || document.querySelector('.parallax-element');
     if (heroCard) {
         document.addEventListener('mousemove', (e) => {
@@ -79,17 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.addEventListener('mouseleave', () => {
             heroCard.style.transform = `translate3d(0px, 0px, 0)`;
-        });
-    }
-
-    // Parallax background on scroll
-    const parallaxBgs = document.querySelectorAll('.parallax-bg, .parallax-background');
-    if (parallaxBgs.length > 0) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            parallaxBgs.forEach(bg => {
-                bg.style.transform = `translateY(${scrolled * 0.25}px)`;
-            });
         });
     }
 

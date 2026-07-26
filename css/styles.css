@@ -141,7 +141,7 @@ body.page-exiting {
     transform: scale(1.06);
 }
 
-/* Fixed Background Parallax */
+/* Fixed Background (Static & Fixed while content scrolls) */
 .parallax-bg {
     position: fixed;
     top: 0;
@@ -152,8 +152,10 @@ body.page-exiting {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.65;
-    transition: transform 0.1s ease-out;
+    background-attachment: fixed;
+    opacity: 0.70;
+    pointer-events: none;
+    transform: none !important;
 }
 
 /* Floating Bottom Navigation Bar (Mobile only: < 768px) */
