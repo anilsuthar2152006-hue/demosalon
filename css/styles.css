@@ -2,6 +2,19 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* overflow-x:hidden must be on html, NOT body, to avoid breaking position:fixed */
+}
+
+/* MOBILE STICKY FIX — force header and bottom nav to always stay viewport-fixed */
+header.mobile-sticky-header,
+.mobile-bottom-nav,
+#draggableCallBtn {
+    position: fixed !important;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 /* Custom Utilities */
@@ -33,11 +46,11 @@ html {
     box-shadow: 0 0 18px rgba(217, 194, 176, 0.35);
 }
 
-/* Page Transitions — opacity only (transform/filter on body break position:fixed children) */
+/* Page Transitions — opacity only (NO transform/filter on body: breaks position:fixed children) */
 body {
     background-color: #0D0D0D;
     color: #e5e2e1;
-    overflow-x: hidden;
+    /* overflow-x:hidden is on html, not here — overflow on body breaks fixed positioning */
     scroll-behavior: smooth;
     opacity: 0;
     transition: opacity 0.35s ease-out;
