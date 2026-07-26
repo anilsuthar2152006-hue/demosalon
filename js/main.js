@@ -4,12 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Page Load & Transition Setup
     document.body.classList.add('page-loaded');
 
+    // Detect Current Page Path
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const activePage = currentPath === '' ? 'index.html' : currentPath;
+
     // Handle Smooth Page Transitions on Link Clicks
     const links = document.querySelectorAll('a[href]:not([target="_blank"]):not([href^="#"]):not([href^="tel:"]):not([href^="mailto:"]):not([href^="javascript:"])');
     links.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (!href || href === '#') return;
+
+            const isCurrentPage = (href === activePage) || 
+                                  ((activePage === 'index.html' || activePage === '') && (href === 'index.html' || href === '/' || href === './'));
+
+            if (isCurrentPage) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
 
             // Only transition for local/internal html pages
             if (href.endsWith('.html') || href.startsWith('/') || href.startsWith('./') || !href.includes(':')) {
@@ -23,9 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. Highlight Active Navigation Items (Desktop & Mobile)
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const activePage = currentPath === '' ? 'index.html' : currentPath;
-
     // Desktop nav links
     document.querySelectorAll('nav a, header a').forEach(navLink => {
         const href = navLink.getAttribute('href');
@@ -52,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (revealElements.length > 0) {
         const observerOptions = {
             root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.12
+            rootMargin: '0px 0px -40px 0px',
+            threshold: 0.1
         };
 
         const scrollObserver = new IntersectionObserver((entries, observer) => {
@@ -72,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroCard = document.getElementById('hero-card') || document.querySelector('.parallax-element');
     if (heroCard) {
         document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth < 768) return; // Skip parallax on touch/mobile for better performance
             const xAxis = (window.innerWidth / 2 - e.clientX) / 45;
             const yAxis = (window.innerHeight / 2 - e.clientY) / 45;
             heroCard.style.transform = `translate3d(${xAxis}px, ${yAxis}px, 0)`;
@@ -85,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Spotlight Effect on Hoverable Glass Cards
     document.querySelectorAll('.service-card-hover, .glass-panel').forEach(card => {
         card.addEventListener('mousemove', e => {
+            if (window.innerWidth < 768) return;
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
@@ -212,7 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeBtn = modal.querySelector('#closeLightbox');
 
         galleryImages.forEach(img => {
-            // Make pointer cursor if part of gallery bento
             if (img.closest('.group') || img.closest('.glass-panel')) {
                 img.style.cursor = 'pointer';
                 img.addEventListener('click', () => {
