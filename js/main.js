@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => scrollObserver.observe(el));
     }
 
-    // 4. Parallax Hero Card & Mouse Movements (Background image stays fixed)
+    // 4. Parallax Hero Card & Mouse Movements (Desktop Only)
     const heroCard = document.getElementById('hero-card') || document.querySelector('.parallax-element');
     if (heroCard) {
         document.addEventListener('mousemove', (e) => {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Spotlight Effect on Hoverable Glass Cards
+    // 5. Spotlight Effect on Hoverable Glass Cards (Desktop Only)
     document.querySelectorAll('.service-card-hover, .glass-panel').forEach(card => {
         card.addEventListener('mousemove', e => {
             if (window.innerWidth < 768) return;
@@ -237,32 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 9. Floating Draggable Call Button Logic
+    // 9. Floating Draggable Call Button Logic (Dynamic Listeners)
     const callBtn = document.getElementById('draggableCallBtn');
     if (callBtn) {
         let isDragging = false;
         let startX = 0, startY = 0;
         let initialLeft = 0, initialTop = 0;
         let hasMoved = false;
-
-        const onStart = (e) => {
-            isDragging = true;
-            hasMoved = false;
-            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-            
-            const rect = callBtn.getBoundingClientRect();
-            startX = clientX;
-            startY = clientY;
-            initialLeft = rect.left;
-            initialTop = rect.top;
-
-            callBtn.style.bottom = 'auto';
-            callBtn.style.right = 'auto';
-            callBtn.style.left = `${initialLeft}px`;
-            callBtn.style.top = `${initialTop}px`;
-            callBtn.style.transition = 'none';
-        };
 
         const onMove = (e) => {
             if (!isDragging) return;
@@ -274,6 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
                 hasMoved = true;
+                if (e.cancelable) e.preventDefault();
             }
 
             let newLeft = initialLeft + deltaX;
@@ -293,17 +275,42 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isDragging) return;
             isDragging = false;
             callBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+
+            document.removeEventListener('mousemove', onMove);
+            document.removeEventListener('mouseup', onEnd);
+            document.removeEventListener('touchmove', onMove);
+            document.removeEventListener('touchend', onEnd);
+
             if (hasMoved && e.cancelable) {
                 e.preventDefault();
             }
         };
 
-        callBtn.addEventListener('mousedown', onStart);
-        document.addEventListener('mousemove', onMove);
-        document.addEventListener('mouseup', onEnd);
+        const onStart = (e) => {
+            isDragging = true;
+            hasMoved = false;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            
+            const rect = callBtn.getBoundingClientRect();
+            startX = clientX;
+            startY = clientY;
+            initialLeft = rect.left;
+            initialTop = rect.top;
 
+            callBtn.style.bottom = 'auto';
+            callBtn.style.right = 'auto';
+            callBtn.style.left = `${initialLeft}px`;
+            callBtn.style.top = `${initialTop}px`;
+            callBtn.style.transition = 'none';
+
+            document.addEventListener('mousemove', onMove);
+            document.addEventListener('mouseup', onEnd);
+            document.addEventListener('touchmove', onMove, { passive: false });
+            document.addEventListener('touchend', onEnd);
+        };
+
+        callBtn.addEventListener('mousedown', onStart);
         callBtn.addEventListener('touchstart', onStart, { passive: true });
-        document.addEventListener('touchmove', onMove, { passive: false });
-        document.addEventListener('touchend', onEnd);
     }
 });
