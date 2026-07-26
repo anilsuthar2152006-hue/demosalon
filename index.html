@@ -26,9 +26,22 @@
 <div class="fixed inset-0 z-[-2] bg-surface/40"></div>
 <div class="fixed inset-0 z-[-1] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,90,75,0.25),_transparent_70%)]"></div>
 
-<!-- Desktop & Tablet Navigation (Identical to About Us page) -->
+<!-- Mobile Top Header with Salon Name BARBER -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-40 flex md:hidden items-center justify-between px-6 py-2.5 bg-surface/80 backdrop-blur-xl border border-white/15 rounded-full w-[calc(100%-2rem)] max-w-[410px] shadow-xl">
+  <a href="index.html" class="font-headline-md text-xl font-bold text-primary tracking-widest uppercase flex items-center gap-2">
+    <span class="material-symbols-outlined text-secondary text-lg">content_cut</span>
+    BARBER
+  </a>
+  <a href="booking.html" class="font-label-sm text-[11px] text-primary bg-white/10 px-4 py-1.5 rounded-full border border-white/15 uppercase tracking-wider hover:bg-white/20 transition-colors">
+    BOOK NOW
+  </a>
+</header>
+
+<!-- Desktop & Tablet Navigation (With BARBER Logo) -->
 <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-fit hidden md:block">
   <div class="glass-panel backdrop-blur-xl rounded-full px-8 py-3 flex items-center gap-8 border border-white/20 shadow-2xl">
+    <a href="index.html" class="font-headline-md text-2xl font-bold text-primary tracking-tighter uppercase">BARBER</a>
+    <div class="h-4 w-px bg-white/20"></div>
     <div class="flex items-center gap-8">
       <a href="index.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">HOME</a>
       <a href="services.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">SERVICES</a>
@@ -36,7 +49,7 @@
       <a href="about.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">ABOUT</a>
       <a href="booking.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">BOOKING</a>
     </div>
-    <div class="h-4 w-px bg-white/10"></div>
+    <div class="h-4 w-px bg-white/20"></div>
     <a href="booking.html" class="relative group block">
       <div class="absolute -inset-0.5 bg-gradient-to-r from-[#00f2fe] via-[#7000ff] to-[#ff8a00] rounded-full opacity-100 group-hover:opacity-80 transition duration-300"></div>
       <div class="relative px-6 py-2 bg-surface rounded-full flex items-center">
@@ -106,52 +119,67 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
         <!-- Service Card 1 -->
-        <div class="glass-panel bg-surface/20 backdrop-blur-xl border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:scale-105 transition-transform duration-500 group service-card-hover">
-            <div class="spotlight w-64 h-64 -top-32 -left-32"></div>
-            <div>
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="font-headline-md text-headline-md text-primary uppercase tracking-wider">THE PRECISION CUT</h3>
-                    <span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full">$85</span>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    A master-level haircut tailored to your head shape and hair texture. Includes a consultation, wash, and styling.
-                </p>
+        <div class="glass-panel bg-surface/20 backdrop-blur-xl border border-white/10 rounded-2xl p-0 overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500 group service-card-hover card-hover-glow">
+            <div class="h-44 w-full overflow-hidden relative img-hover-zoom">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx1HtwZJv37D3Tgh44xPC1xcPp2ANXygSB0rEfcPH17MA2qGk9SisNP9nylQ4r1rUkxA6Mjp_FY1lQlIkCF_gJ-vmj0J-a88bCf2PChkNr17O7Gq_sxlVYeqF3Y-PHzfyfo1A6YPRkqoAV7Z1Zi8-Z7oiVoiPfT5rUcqUywWXEyIew25Y0-rH_FKPUlkYLbN1mCIK_FGiM3Adip1QJEnOFWg8USeZnt1qYbzEkgBb0dcK7mm0AoUOLKGTjZQQXzmoZtmnbnmIMYeXb" alt="The Precision Cut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-70"></div>
             </div>
-            <a class="w-full border border-white/20 text-primary font-label-sm text-label-sm py-4 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest text-center block btn-hover-effect" href="booking.html?service=Precision+Cut">
-                SELECT
-            </a>
+            <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary uppercase tracking-wider">THE PRECISION CUT</h3>
+                        <span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-white/10">$85</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        A master-level haircut tailored to your head shape and hair texture. Includes a consultation, wash, and styling.
+                    </p>
+                </div>
+                <a class="w-full border border-white/20 text-primary font-label-sm text-label-sm py-3.5 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest text-center block btn-hover-effect" href="booking.html?service=Precision+Cut">
+                    SELECT
+                </a>
+            </div>
         </div>
         <!-- Service Card 2 -->
-        <div class="glass-panel bg-surface/20 backdrop-blur-xl border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:scale-105 transition-transform duration-500 group service-card-hover">
-            <div class="spotlight w-64 h-64 -top-32 -left-32"></div>
-            <div>
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="font-headline-md text-headline-md text-primary uppercase tracking-wider">THE ROYAL SHAVE</h3>
-                    <span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full">$65</span>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    Traditional straight razor shave with hot towels, pre-shave oils, and a soothing post-shave treatment.
-                </p>
+        <div class="glass-panel bg-surface/20 backdrop-blur-xl border border-white/10 rounded-2xl p-0 overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500 group service-card-hover card-hover-glow">
+            <div class="h-44 w-full overflow-hidden relative img-hover-zoom">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiESOZYcQBc6pG7eMUA8mM1s5U332iO2I3himlJHAIbquWKtMM5IKuuJws04xScQv0u87J74Pa3azVxmz05MftGW8eFwSbj6m1ZA08TEw1ctG5T10DkK9cRt_1zOeQ_AN6VMt6gmolBandZDD8rzMjA4C24FgzhK8l0X_qcgxyBiQuO0yzCWMT-mo2IZBZ0w4hZcCZJoMl-MtAriOTDovTwImey5xkqGEJQJlUr__HcC0cVpsORqjTqRMPQ0Qw-tvMSDkBrFbErku8" alt="The Royal Shave" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-70"></div>
             </div>
-            <a class="w-full border border-white/20 text-primary font-label-sm text-label-sm py-4 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest text-center block btn-hover-effect" href="booking.html?service=Royal+Shave">
-                SELECT
-            </a>
+            <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary uppercase tracking-wider">THE ROYAL SHAVE</h3>
+                        <span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-white/10">$65</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Traditional straight razor shave with hot towels, pre-shave oils, and a soothing post-shave treatment.
+                    </p>
+                </div>
+                <a class="w-full border border-white/20 text-primary font-label-sm text-label-sm py-3.5 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest text-center block btn-hover-effect" href="booking.html?service=Royal+Shave">
+                    SELECT
+                </a>
+            </div>
         </div>
         <!-- Service Card 3 -->
-        <div class="glass-panel bg-surface/20 backdrop-blur-xl border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:scale-105 transition-transform duration-500 group service-card-hover">
-            <div class="spotlight w-64 h-64 -top-32 -left-32"></div>
-            <div>
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="font-headline-md text-headline-md text-primary uppercase tracking-wider">THE LUXURY FACIAL</h3>
-                    <span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full">$110</span>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                    Deep cleansing and hydration treatment designed specifically for men's skin. Includes a relaxing facial massage.
-                </p>
+        <div class="glass-panel bg-surface/20 backdrop-blur-xl border border-white/10 rounded-2xl p-0 overflow-hidden flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500 group service-card-hover card-hover-glow">
+            <div class="h-44 w-full overflow-hidden relative img-hover-zoom">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp3GW2Wvsdu4R51ui4eQslvcZ6kVL3-MMZvX-oQM_z85ORBqDmXfr__oPpyMK6hMQplpmcL15yJhnoN3bG18C4phJpBknV5U9G1kyC0Xfi4EhfiS8F2dFNEgDrKwpvzpU2IKPEyCaaaLyecryf20Vs0UXLU2YW1LqH0s1oa4CsY0yH9NLIgeeP7KXyH5rkWeBc_kp0e_QbXkK9OU8KeANkJgWKRssprtpSQaS-XsZqkyJnUWML1AdOIPxQOgA6vArT8KxvQ9odj76Y" alt="The Luxury Facial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-70"></div>
             </div>
-            <a class="w-full border border-white/20 text-primary font-label-sm text-label-sm py-4 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest text-center block btn-hover-effect" href="booking.html?service=Luxury+Facial">
-                SELECT
-            </a>
+            <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-headline-md text-headline-md text-primary uppercase tracking-wider">THE LUXURY FACIAL</h3>
+                        <span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-white/10">$110</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Deep cleansing and hydration treatment designed specifically for men's skin. Includes a relaxing facial massage.
+                    </p>
+                </div>
+                <a class="w-full border border-white/20 text-primary font-label-sm text-label-sm py-3.5 rounded-lg hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest text-center block btn-hover-effect" href="booking.html?service=Luxury+Facial">
+                    SELECT
+                </a>
+            </div>
         </div>
     </div>
 </section>

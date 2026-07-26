@@ -26,9 +26,22 @@
 <div class="fixed inset-0 z-[-2] bg-surface/40"></div>
 <div class="fixed inset-0 z-[-1] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,90,75,0.25),_transparent_70%)]"></div>
 
-<!-- TopNavBar (Identical to About Us page) -->
+<!-- Mobile Top Header with Salon Name BARBER -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-40 flex md:hidden items-center justify-between px-6 py-2.5 bg-surface/80 backdrop-blur-xl border border-white/15 rounded-full w-[calc(100%-2rem)] max-w-[410px] shadow-xl">
+  <a href="index.html" class="font-headline-md text-xl font-bold text-primary tracking-widest uppercase flex items-center gap-2">
+    <span class="material-symbols-outlined text-secondary text-lg">content_cut</span>
+    BARBER
+  </a>
+  <a href="booking.html" class="font-label-sm text-[11px] text-primary bg-white/10 px-4 py-1.5 rounded-full border border-white/15 uppercase tracking-wider hover:bg-white/20 transition-colors">
+    BOOK NOW
+  </a>
+</header>
+
+<!-- TopNavBar (With BARBER Logo) -->
 <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-fit hidden md:block">
   <div class="glass-panel backdrop-blur-xl rounded-full px-8 py-3 flex items-center gap-8 border border-white/20 shadow-2xl">
+    <a href="index.html" class="font-headline-md text-2xl font-bold text-primary tracking-tighter uppercase">BARBER</a>
+    <div class="h-4 w-px bg-white/20"></div>
     <div class="flex items-center gap-8">
       <a href="index.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">HOME</a>
       <a href="services.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">SERVICES</a>
@@ -36,7 +49,7 @@
       <a href="about.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">ABOUT</a>
       <a href="booking.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">BOOKING</a>
     </div>
-    <div class="h-4 w-px bg-white/10"></div>
+    <div class="h-4 w-px bg-white/20"></div>
     <a href="booking.html" class="relative group block">
       <div class="absolute -inset-0.5 bg-gradient-to-r from-[#00f2fe] via-[#7000ff] to-[#ff8a00] rounded-full opacity-100 group-hover:opacity-80 transition duration-300"></div>
       <div class="relative px-6 py-2 bg-surface rounded-full flex items-center">
