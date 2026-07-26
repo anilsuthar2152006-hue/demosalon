@@ -47,9 +47,9 @@
 </nav>
 
 <!-- Main Content Canvas -->
-<main class="relative z-10 w-full max-w-container-max mx-auto flex flex-col gap-32 pb-32">
+<main class="relative z-10 w-full max-w-container-max mx-auto flex flex-col gap-12 md:gap-32 pb-32 pt-6 md:pt-0">
 <!-- Hero Section -->
-<section class="min-h-[921px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop pt-32 relative">
+<section class="min-h-[60vh] md:min-h-[921px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop pt-12 md:pt-32 relative">
 <div class="glass-panel bg-surface-container-high/40 ambient-shadow rounded-2xl p-8 md:p-16 max-w-4xl parallax-element reveal-on-scroll scale-in" id="hero-card">
 <h1 class="font-headline-xl text-headline-xl text-primary mb-6">
                     PRECISION<br>MEETS ARTISTRY
@@ -204,27 +204,37 @@
 
 
 
-<!-- Floating Bottom Navigation (Mobile Only <768px) -->
+<!-- Floating Bottom Navigation (Mobile Only <768px - Reference Matched) -->
 <div class="mobile-bottom-nav">
     <a href="index.html" class="mobile-nav-item active">
-        <span class="material-symbols-outlined">home</span>
+        <div class="mobile-nav-icon-wrap">
+            <span class="material-symbols-outlined">home</span>
+        </div>
         <span>Home</span>
     </a>
     <a href="services.html" class="mobile-nav-item">
-        <span class="material-symbols-outlined">content_cut</span>
+        <div class="mobile-nav-icon-wrap">
+            <span class="material-symbols-outlined">content_cut</span>
+        </div>
         <span>Services</span>
     </a>
     <a href="gallery.html" class="mobile-nav-item">
-        <span class="material-symbols-outlined">grid_view</span>
+        <div class="mobile-nav-icon-wrap">
+            <span class="material-symbols-outlined">grid_view</span>
+        </div>
         <span>Gallery</span>
     </a>
     <a href="about.html" class="mobile-nav-item">
-        <span class="material-symbols-outlined">info</span>
+        <div class="mobile-nav-icon-wrap">
+            <span class="material-symbols-outlined">info</span>
+        </div>
         <span>About</span>
     </a>
     <a href="booking.html" class="mobile-nav-item">
-        <span class="material-symbols-outlined">calendar_month</span>
-        <span>Contact</span>
+        <div class="mobile-nav-icon-wrap">
+            <span class="material-symbols-outlined">calendar_month</span>
+        </div>
+        <span>Booking</span>
     </a>
 </div>
 
