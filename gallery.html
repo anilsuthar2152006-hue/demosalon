@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MONOLITH BARBER - Gallery</title>
+<meta name="description" content="A curated gallery of precision work. Explore the meticulous details and cinematic atmosphere of our craft.">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@400;500;700&amp;family=Anybody:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-tint": "#c6c6c7", secondary: "#d9c2b0", surface: "#131313", "on-secondary-container": "#cab4a2", error: "#ffb4ab", "surface-variant": "#353534", "tertiary-fixed-dim": "#c8c6c5", "on-primary-fixed": "#1a1c1c", "error-container": "#93000a", "inverse-on-surface": "#313030", "outline-variant": "#444748", "secondary-container": "#564638", "primary-fixed": "#e2e2e2", "on-error": "#690005", "tertiary-fixed": "#e4e2e1", tertiary: "#ffffff", "on-error-container": "#ffdad6", "on-secondary": "#3c2e21", "on-background": "#e5e2e1", primary: "#ffffff", "primary-container": "#e2e2e2", "on-tertiary": "#303030", "surface-bright": "#3a3939", "on-tertiary-container": "#656464", "surface-container-highest": "#353534", "on-surface": "#e5e2e1", "inverse-surface": "#e5e2e1", "on-tertiary-fixed": "#1b1c1c", "surface-dim": "#131313", "on-primary": "#2f3131", "on-primary-container": "#636565", "surface-container": "#201f1f", "on-surface-variant": "#c4c7c8", "primary-fixed-dim": "#c6c6c7", "on-secondary-fixed": "#25190d", "tertiary-container": "#e4e2e1", background: "#131313", "on-primary-fixed-variant": "#454747", "on-secondary-fixed-variant": "#534436", "surface-container-high": "#2a2a2a", "secondary-fixed": "#f6decb", "surface-container-low": "#1c1b1b", outline: "#8e9192", "surface-container-lowest": "#0e0e0e", "on-tertiary-fixed-variant": "#474746", "inverse-primary": "#5d5f5f", "secondary-fixed-dim": "#d9c2b0"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "24px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "20px", "panel-gap": "32px", "container-max": "1280px"}, fontFamily: {"body-lg": ["Anybody"], "headline-md": ["Anton"], "headline-lg-mobile": ["Anton"], "headline-xl": ["Anton"], "headline-lg": ["Anton"], "body-md": ["Anybody"], "label-sm": ["JetBrains Mono"], headline: ["Anton"], display: ["Anton"], body: ["Anybody"], label: ["JetBrains Mono"]}, fontSize: {"body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.4", fontWeight: "500"}], "headline-lg-mobile": ["32px", {lineHeight: "1.2", fontWeight: "500"}], "headline-xl": ["64px", {lineHeight: "1.1", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500"}]}}}};</script>
+
+<!-- Global Custom Styles -->
+<link rel="stylesheet" href="css/styles.css">
+<!-- Global JS Engine -->
+<script src="js/main.js" defer></script>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- The Void (Static Background) -->
+<div class="fixed inset-0 z-[-1] bg-[#0D0D0D]">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(107,90,75,0.1),_transparent_60%)]"></div>
+</div>
+
+<!-- TopNavBar -->
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 hidden md:flex items-center gap-8 px-8 py-3 rounded-full glass-panel border border-white/20 shadow-2xl backdrop-blur-xl">
+  <ul class="flex items-center gap-8 font-body-md text-body-md tracking-widest">
+    <li><a href="index.html" class="text-on-surface-variant/80 hover:text-primary transition-colors uppercase">HOME</a></li>
+    <li><a href="services.html" class="text-on-surface-variant/80 hover:text-primary transition-colors uppercase">SERVICES</a></li>
+    <li><a href="gallery.html" class="bg-white/10 px-4 py-2 rounded-full text-primary transition-colors uppercase">GALLERY</a></li>
+    <li><a href="about.html" class="text-on-surface-variant/80 hover:text-primary transition-colors uppercase">ABOUT</a></li>
+    <li><a href="booking.html" class="text-on-surface-variant/80 hover:text-primary transition-colors uppercase">BOOKING</a></li>
+  </ul>
+  <div class="h-6 w-[1px] bg-white/10 mx-2"></div>
+  <a href="booking.html" class="relative group block">
+    <div class="absolute -inset-[1px] rounded-full bg-gradient-to-r from-[#00f2ff] via-[#7000ff] to-[#ff8a00] opacity-100"></div>
+    <div class="relative bg-surface rounded-full px-6 py-2 font-body-md text-body-md text-primary hover:bg-transparent transition-colors">
+      BOOK NOW
+    </div>
+  </a>
+</nav>
+
+<!-- Main Content -->
+<main class="pt-[120px] pb-32 px-margin-mobile md:px-margin-desktop min-h-screen relative z-10">
+<!-- Section Header -->
+<header class="max-w-container-max mx-auto mb-16 text-center md:text-left reveal-on-scroll">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 uppercase">The Archives</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A curated gallery of precision work. Explore the meticulous details and cinematic atmosphere of our craft.</p>
+</header>
+<!-- Gallery Grid (Asymmetric Bento Style) -->
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-panel-gap auto-rows-[300px] md:auto-rows-[400px]">
+<!-- Item 1: Large Feature -->
+<div class="group relative md:col-span-8 rounded-xl overflow-hidden glass-panel reveal-on-scroll img-hover-zoom">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-700 z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" data-alt="Precision fade haircut close-up shot in dark mode salon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqdMO_dVHX72qwXyagSKausKQ_wgryoGiRYClIFuBCLzU7L1oL3fraYv3dW6EcV4H_q-tOaeVew29Wd998XJjyQtt9BxtMs7bFoTsEc3l7HFbAtHfNPbETLxafQ5KvGYfv1YLpKUwsVTbZiH0JZwx9FXpXALcsCFUQdcbHvb2BwsxBu2Ph_9t18pPiFt2VwB2yBpLjz_c7IK31q9KP0d9rqswvji3Ke9urNY9RdiXzmey3f7uu7P_yOtupGf-Jl6U03Z4csPc4Wd-_" alt="Precision fade technique">
+<div class="absolute bottom-6 left-6 z-20 font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">Precision Fade</div>
+</div>
+<!-- Item 2: Tall Portrait -->
+<div class="group relative md:col-span-4 md:row-span-2 rounded-xl overflow-hidden glass-panel reveal-on-scroll delay-1 img-hover-zoom">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-700 z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" data-alt="Hot towel shave in a sophisticated grooming lounge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiESOZYcQBc6pG7eMUA8mM1s5U332iO2I3himlJHAIbquWKtMM5IKuuJws04xScQv0u87J74Pa3azVxmz05MftGW8eFwSbj6m1ZA08TEw1ctG5T10DkK9cRt_1zOeQ_AN6VMt6gmolBandZDD8rzMjA4C24FgzhK8l0X_qcgxyBiQuO0yzCWMT-mo2IZBZ0w4hZcCZJoMl-MtAriOTDovTwImey5xkqGEJQJlUr__HcC0cVpsORqjTqRMPQ0Qw-tvMSDkBrFbErku8" alt="Hot towel shave session">
+<div class="absolute bottom-6 left-6 z-20 font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">Hot Towel Detail</div>
+</div>
+<!-- Item 3: Square Detail -->
+<div class="group relative md:col-span-4 rounded-xl overflow-hidden glass-panel reveal-on-scroll delay-2 img-hover-zoom">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-700 z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" data-alt="Macro detail of barbering instruments on dark glass surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDjbKTI9lUf35jcvUQHsOYyw4utsxv6LEzhFXVXMmWVWVnbEdwxzAuepS43_jgasHIXuCKMlJGQXYUcFXTpZ2PvFP8Bny_xzjGapoX_9EZ99DIoJ7EH3ETmiBhpYaJleufcUGFdfN_cHhABgq2gkAItrjYgIhSfWAV0K68nk4VjiKAzHuC3N5dC2S__iy5Ehv6Dso6e6S4-k4jDkOY8VsXRhiFhPnSDocOKUr2FP-EVGVff3HnjpjjpwoAfwZqwNJGaynXz7Ytinhk" alt="Craftsmanship instruments">
+<div class="absolute bottom-6 left-6 z-20 font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">Instruments</div>
+</div>
+<!-- Item 4: Square Atmosphere -->
+<div class="group relative md:col-span-4 rounded-xl overflow-hidden glass-panel reveal-on-scroll delay-3 img-hover-zoom">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-700 z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" data-alt="Architectural photograph of luxury barbershop interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8TsteeZLhKH76n6BLM680rCUXCBNhn35_Z5c0Rpl6pRuszNEolVJs8o6q5egE1oOs6DaoS7TYBbaBXdP0AI0MO7e2XRUFLkm0fg7UM9evU5aafooKaX0cTCoVLukJiGqgLi7l1qRtPAEIQ25DfcNd0fc8tS843raW3RYvX6ZQAi4ozmd2EYsYK6xg3dDFgHzh2UsG3jSb1-SXZziYCmUiJoQERi9qfTFRJoMYZay-LcFWc96pGVqUdZQUC4k_f8mOZwl1SfVR918l" alt="Monolith Barber lounge design">
+<div class="absolute bottom-6 left-6 z-20 font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">The Lounge</div>
+</div>
+</div>
+</main>
+
+<!-- SideNavBar (Floating FABs) -->
+<aside class="fixed bottom-margin-desktop right-margin-desktop z-40 flex flex-col gap-4 font-label-sm text-label-sm text-primary hidden md:flex">
+<a class="group relative flex items-center justify-center bg-white/10 text-primary rounded-full p-4 border border-white/20 shadow-xl backdrop-blur-xl hover:scale-110 transition-transform hover:bg-primary hover:text-on-primary" href="tel:8529629979">
+<span class="material-symbols-outlined">call</span>
+<span class="absolute right-full mr-4 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container px-3 py-2 rounded-DEFAULT whitespace-nowrap pointer-events-none">CALL</span>
+</a>
+<a class="group relative flex items-center justify-center bg-white/10 text-primary rounded-full p-4 border border-white/20 shadow-xl backdrop-blur-xl hover:scale-110 transition-transform hover:bg-primary hover:text-on-primary" href="https://wa.me/8529629979" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+<span class="absolute right-full mr-4 opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container px-3 py-2 rounded-DEFAULT whitespace-nowrap pointer-events-none">WHATSAPP</span>
+</a>
+</aside>
+
+<!-- Floating Bottom Navigation (Mobile Only <768px) -->
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">home</span>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">content_cut</span>
+        <span>Services</span>
+    </a>
+    <a href="gallery.html" class="mobile-nav-item active">
+        <span class="material-symbols-outlined">grid_view</span>
+        <span>Gallery</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">info</span>
+        <span>About</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span>Contact</span>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="relative z-10 bg-surface-container-lowest/60 backdrop-blur-[30px] border-t border-white/5 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] bg-gradient-to-t from-surface-dim to-transparent grid grid-cols-1 md:grid-cols-12 gap-panel-gap px-margin-mobile md:px-margin-desktop py-20 w-full mt-24">
+<div class="md:col-span-6 flex flex-col justify-between">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-8 md:mb-0 tracking-tighter">&nbsp;BARBER</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 MONOLITH BARBER. PRECISION GROOMING.</p><p class="font-body-md text-body-md text-on-surface-variant mt-2">MADE BY ANIL</p>
+</div>
+<div class="md:col-span-6 flex flex-col md:items-end justify-between">
+<ul class="flex flex-wrap gap-8 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary-fixed transition-all uppercase" href="#">INSTAGRAM</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-fixed transition-all uppercase" href="#">FACEBOOK</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-fixed transition-all uppercase" href="#">TERMS</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary-fixed transition-all uppercase" href="#">PRIVACY</a></li>
+</ul>
+</div>
+</footer>
+
+</body>
+</html>

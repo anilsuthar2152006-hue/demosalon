@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Monolith Barber - About Us</title>
+<meta name="description" content="Founded on the principles of absolute precision and uncompromising luxury, Monolith Barber is a sanctuary for the modern gentleman.">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@400;500;700&amp;family=Anybody:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-tint": "#c6c6c7", secondary: "#d9c2b0", surface: "#131313", "on-secondary-container": "#cab4a2", error: "#ffb4ab", "surface-variant": "#353534", "tertiary-fixed-dim": "#c8c6c5", "on-primary-fixed": "#1a1c1c", "error-container": "#93000a", "inverse-on-surface": "#313030", "outline-variant": "#444748", "secondary-container": "#564638", "primary-fixed": "#e2e2e2", "on-error": "#690005", "tertiary-fixed": "#e4e2e1", tertiary: "#ffffff", "on-error-container": "#ffdad6", "on-secondary": "#3c2e21", "on-background": "#e5e2e1", primary: "#ffffff", "primary-container": "#e2e2e2", "on-tertiary": "#303030", "surface-bright": "#3a3939", "on-tertiary-container": "#656464", "surface-container-highest": "#353534", "on-surface": "#e5e2e1", "inverse-surface": "#e5e2e1", "on-tertiary-fixed": "#1b1c1c", "surface-dim": "#131313", "on-primary": "#2f3131", "on-primary-container": "#636565", "surface-container": "#201f1f", "on-surface-variant": "#c4c7c8", "primary-fixed-dim": "#c6c6c7", "on-secondary-fixed": "#25190d", "tertiary-container": "#e4e2e1", background: "#131313", "on-primary-fixed-variant": "#454747", "on-secondary-fixed-variant": "#534436", "surface-container-high": "#2a2a2a", "secondary-fixed": "#f6decb", "surface-container-low": "#1c1b1b", outline: "#8e9192", "surface-container-lowest": "#0e0e0e", "on-tertiary-fixed-variant": "#474746", "inverse-primary": "#5d5f5f", "secondary-fixed-dim": "#d9c2b0"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "24px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "20px", "panel-gap": "32px", "container-max": "1280px"}, fontFamily: {"body-lg": ["Anybody"], "headline-md": ["Anton"], "headline-lg-mobile": ["Anton"], "headline-xl": ["Anton"], "headline-lg": ["Anton"], "body-md": ["Anybody"], "label-sm": ["JetBrains Mono"], headline: ["Anton"], display: ["Anton"], body: ["Anybody"], label: ["JetBrains Mono"]}, fontSize: {"body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.4", fontWeight: "500"}], "headline-lg-mobile": ["32px", {lineHeight: "1.2", fontWeight: "500"}], "headline-xl": ["64px", {lineHeight: "1.1", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500"}]}}}};</script>
+
+<!-- Global Custom Styles -->
+<link rel="stylesheet" href="css/styles.css">
+<!-- Global JS Engine -->
+<script src="js/main.js" defer></script>
+</head>
+<body class="font-body-lg text-body-lg antialiased">
+<!-- The Void Background -->
+<div class="fixed inset-0 z-[-1] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,90,75,0.1)_0%,_transparent_60%)]"></div>
+
+<!-- TopNavBar -->
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-fit hidden md:block">
+  <div class="glass-panel backdrop-blur-xl rounded-full px-8 py-3 flex items-center gap-8 border border-white/20 shadow-2xl">
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">HOME</a>
+      <a href="services.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">SERVICES</a>
+      <a href="gallery.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">GALLERY</a>
+      <a href="about.html" class="font-body-md text-body-md tracking-widest text-primary bg-white/10 px-4 py-1.5 rounded-full">ABOUT</a>
+      <a href="booking.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">BOOKING</a>
+    </div>
+    <div class="h-4 w-px bg-white/10"></div>
+    <a href="booking.html" class="relative group block">
+      <div class="absolute -inset-0.5 bg-gradient-to-r from-[#00f2fe] via-[#7000ff] to-[#ff8a00] rounded-full opacity-100 group-hover:opacity-80 transition duration-300"></div>
+      <div class="relative px-6 py-2 bg-surface rounded-full flex items-center">
+        <span class="font-label-sm text-label-sm text-primary">BOOK NOW</span>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<!-- SideNavBar (Floating Buttons) -->
+<div class="fixed bottom-margin-mobile md:bottom-margin-desktop right-margin-mobile md:right-margin-desktop z-40 flex flex-col gap-4 border border-white/20 rounded-full shadow-xl bg-surface/20 backdrop-blur-xl p-2 hidden md:flex">
+<div class="hidden md:block text-center pt-2 pb-1">
+<span class="font-label-sm text-label-sm text-primary block">CONTACT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">8529629979</span>
+</div>
+<a href="tel:8529629979" class="bg-white/10 text-primary rounded-full p-4 hover:scale-110 transition-transform group relative" title="CALL">
+<span class="material-symbols-outlined block group-active:scale-90 transition-transform">call</span>
+</a>
+<a href="https://wa.me/8529629979" target="_blank" class="bg-white/10 text-primary rounded-full p-4 hover:scale-110 transition-transform group relative" title="WHATSAPP">
+<span class="material-symbols-outlined block group-active:scale-90 transition-transform">chat</span>
+</a>
+</div>
+
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<!-- Hero / Story Section -->
+<section class="mb-32 pt-12 reveal-on-scroll">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<h1 class="font-headline-xl text-headline-xl mb-6 text-primary">THE MONOLITH<br>STORY</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
+                        Founded on the principles of absolute precision and uncompromising luxury, Monolith Barber is more than a grooming destination—it is a sanctuary for the modern gentleman. We blend classical techniques with a futuristic, atmospheric environment to redefine the standard of personal care.
+                    </p>
+<div class="flex gap-4">
+<div class="glass-panel p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div>
+<div class="font-label-sm text-label-sm text-secondary">ESTABLISHED</div>
+<div class="font-body-lg text-body-lg text-primary">2018</div>
+</div>
+</div>
+<div class="glass-panel p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_city</span>
+<div>
+<div class="font-label-sm text-label-sm text-secondary">LOCATIONS</div>
+<div class="font-body-lg text-body-lg text-primary">3 Prime Spots</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="glass-panel rounded-xl overflow-hidden aspect-[4/5] ambient-shadow img-hover-zoom">
+<img class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="Barber chair in dramatic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgqnKtCmp4pWo_OjOvStNyuPqZjOUDXuKqi4zg8NDqyS1x1PNNXr1lNnjjBxY_sUu0x4VwyOJV64rCx5iwCl5kj6GTMat8NftbLSQJfiwzBD38JVa3usPZKtvs4PgB-wyYx8P4leqhxDpJC8zXk3YJHTieVhNZ_XF7lnxGGF0yvH8qj2GnDDVUo9ndXCMIt1uQrKYdgAh5TRlMt5nU6gHMDohqzuG2SsG3cBFzGreCnjdyOwLpJrgfbuamSCC6kroZep7RaReqtYG2" alt="Monolith sanctuary interior">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Mission & Vision (Bento Grid) -->
+<section class="mb-32 reveal-on-scroll">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12 text-center">OUR PHILOSOPHY</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Mission -->
+<div class="md:col-span-8 glass-panel rounded-2xl p-8 md:p-12 flex flex-col justify-center">
+<div class="font-label-sm text-label-sm text-secondary mb-4 tracking-widest">THE MISSION</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Elevating the Ritual of Grooming</h3>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                        To provide an unparalleled grooming experience that empowers our clients through meticulous attention to detail, premium bespoke products, and an environment engineered for absolute relaxation and focus. We don't just cut hair; we sculpt confidence.
+                    </p>
+</div>
+<!-- Stat 1 -->
+<div class="md:col-span-4 glass-panel rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">content_cut</span>
+<div class="font-headline-xl text-headline-xl text-primary mb-2 counter" data-target="15000">15000+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">PRECISION CUTS</div>
+</div>
+<!-- Stat 2 -->
+<div class="md:col-span-4 glass-panel rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">military_tech</span>
+<div class="font-headline-xl text-headline-xl text-primary mb-2 counter" data-target="12">12+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">MASTER BARBERS</div>
+</div>
+<!-- Vision -->
+<div class="md:col-span-8 glass-panel rounded-2xl p-8 md:p-12 flex flex-col justify-center">
+<div class="font-label-sm text-label-sm text-secondary mb-4 tracking-widest">THE VISION</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">The Future of Masculine Care</h3>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                        We envision a landscape where personal care is a revered ritual, integrating advanced aesthetic techniques with timeless service. Monolith aims to be the vanguard of luxury grooming, expanding our sanctuaries globally while maintaining the intimate exclusivity of our craft.
+                    </p>
+</div>
+</div>
+</section>
+
+<!-- Journey Timeline -->
+<section class="mb-32 reveal-on-scroll">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-16 text-center">THE JOURNEY</h2>
+<div class="relative max-w-4xl mx-auto">
+<!-- Timeline Line -->
+<div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-white/10 transform md:-translate-x-1/2"></div>
+<!-- Timeline Items -->
+<div class="space-y-12">
+<div class="relative flex items-center md:justify-end">
+<div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-secondary transform -translate-x-1/2 shadow-[0_0_15px_rgba(217,194,176,0.5)]"></div>
+<div class="ml-16 md:ml-0 md:w-5/12 glass-panel p-6 rounded-xl">
+<div class="font-label-sm text-label-sm text-secondary mb-2">2018</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">The Genesis</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Monolith Barber opens its first clandestine studio, focusing solely on bespoke scissor work and traditional straight-razor shaves for a select clientele.</p>
+</div>
+</div>
+<div class="relative flex items-center md:justify-start">
+<div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant border-2 border-secondary transform -translate-x-1/2"></div>
+<div class="ml-16 md:ml-0 md:w-5/12 glass-panel p-6 rounded-xl text-left md:text-right">
+<div class="font-label-sm text-label-sm text-secondary mb-2">2020</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">The Expansion</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Introduction of the 'Void Lounge' concept, integrating a premium bar and relaxation zone, elevating the standard appointment into an immersive experience.</p>
+</div>
+</div>
+<div class="relative flex items-center md:justify-end">
+<div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-surface-variant border-2 border-secondary transform -translate-x-1/2"></div>
+<div class="ml-16 md:ml-0 md:w-5/12 glass-panel p-6 rounded-xl">
+<div class="font-label-sm text-label-sm text-secondary mb-2">2023</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Architectural Redesign</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Flagship location overhauled with our signature glassmorphism and matte-black aesthetics, setting a new benchmark for luxury interiors in the grooming sector.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Floating Bottom Navigation (Mobile Only <768px) -->
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">home</span>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">content_cut</span>
+        <span>Services</span>
+    </a>
+    <a href="gallery.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">grid_view</span>
+        <span>Gallery</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item active">
+        <span class="material-symbols-outlined">info</span>
+        <span>About</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span>Contact</span>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest/60 backdrop-blur-[30px] border-t border-white/5 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] bg-gradient-to-t from-surface-dim to-transparent mt-20 relative z-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-panel-gap px-margin-mobile md:px-margin-desktop py-12 md:py-20 max-w-container-max mx-auto">
+<div class="md:col-span-4 flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg text-primary">&nbsp;BARBER</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    Precision grooming in an atmosphere of absolute luxury. Enter the void, emerge refined.
+                </p>
+</div>
+<div class="md:col-span-4 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary mb-2">CONNECT</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">INSTAGRAM</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">FACEBOOK</a>
+</div>
+<div class="md:col-span-4 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary mb-2">LEGAL</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">TERMS</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">PRIVACY</a>
+</div>
+<div class="md:col-span-12 mt-8 pt-8 border-t border-white/5 text-center">
+<span class="font-body-md text-body-md text-secondary">© 2024 MONOLITH BARBER. PRECISION GROOMING.</span><span class="font-body-md text-body-md text-secondary ml-4">MADE BY ANIL</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

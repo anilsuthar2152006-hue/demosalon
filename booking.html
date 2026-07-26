@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MONOLITH BARBER - Book Appointment & Contact</title>
+<meta name="description" content="Reserve your seat at Monolith Barber Studio. Select your preferred date, time, and service for an unparalleled grooming experience.">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@400;500;700&amp;family=Anybody:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-tint": "#c6c6c7", secondary: "#d9c2b0", surface: "#131313", "on-secondary-container": "#cab4a2", error: "#ffb4ab", "surface-variant": "#353534", "tertiary-fixed-dim": "#c8c6c5", "on-primary-fixed": "#1a1c1c", "error-container": "#93000a", "inverse-on-surface": "#313030", "outline-variant": "#444748", "secondary-container": "#564638", "primary-fixed": "#e2e2e2", "on-error": "#690005", "tertiary-fixed": "#e4e2e1", tertiary: "#ffffff", "on-error-container": "#ffdad6", "on-secondary": "#3c2e21", "on-background": "#e5e2e1", primary: "#ffffff", "primary-container": "#e2e2e2", "on-tertiary": "#303030", "surface-bright": "#3a3939", "on-tertiary-container": "#656464", "surface-container-highest": "#353534", "on-surface": "#e5e2e1", "inverse-surface": "#e5e2e1", "on-tertiary-fixed": "#1b1c1c", "surface-dim": "#131313", "on-primary": "#2f3131", "on-primary-container": "#636565", "surface-container": "#201f1f", "on-surface-variant": "#c4c7c8", "primary-fixed-dim": "#c6c6c7", "on-secondary-fixed": "#25190d", "tertiary-container": "#e4e2e1", background: "#131313", "on-primary-fixed-variant": "#454747", "on-secondary-fixed-variant": "#534436", "surface-container-high": "#2a2a2a", "secondary-fixed": "#f6decb", "surface-container-low": "#1c1b1b", outline: "#8e9192", "surface-container-lowest": "#0e0e0e", "on-tertiary-fixed-variant": "#474746", "inverse-primary": "#5d5f5f", "secondary-fixed-dim": "#d9c2b0"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "24px", unit: "8px", "margin-desktop": "64px", "margin-mobile": "20px", "panel-gap": "32px", "container-max": "1280px"}, fontFamily: {"body-lg": ["Anybody"], "headline-md": ["Anton"], "headline-lg-mobile": ["Anton"], "headline-xl": ["Anton"], "headline-lg": ["Anton"], "body-md": ["Anybody"], "label-sm": ["JetBrains Mono"], headline: ["Anton"], display: ["Anton"], body: ["Anybody"], label: ["JetBrains Mono"]}, fontSize: {"body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "1.4", fontWeight: "500"}], "headline-lg-mobile": ["32px", {lineHeight: "1.2", fontWeight: "500"}], "headline-xl": ["64px", {lineHeight: "1.1", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "1", letterSpacing: "0.1em", fontWeight: "500"}]}}}};</script>
+
+<!-- Global Custom Styles -->
+<link rel="stylesheet" href="css/styles.css">
+<!-- Global JS Engine -->
+<script src="js/main.js" defer></script>
+</head>
+<body class="text-on-surface font-body-lg min-h-screen flex flex-col relative overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- Background Radial Glow -->
+<div class="fixed inset-0 z-[-1] bg-[#0D0D0D] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,90,75,0.1)_0%,_transparent_60%)]"></div>
+
+<!-- TopNavBar -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-fit hidden md:block">
+  <div class="flex items-center gap-8 px-8 py-3 bg-surface-container-lowest/60 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl">
+    <!-- Logo/Brand -->
+    <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary tracking-tighter cursor-pointer mr-4">BARBER</a>
+    
+    <!-- Navigation Links -->
+    <div class="hidden md:flex items-center gap-8 font-body-md text-body-md tracking-widest">
+      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="index.html">HOME</a>
+      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="services.html">SERVICES</a>
+      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="gallery.html">GALLERY</a>
+      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="about.html">ABOUT</a>
+      <a class="bg-white/10 text-primary px-4 py-2 rounded-full transition-colors duration-300" href="booking.html">BOOKING</a>
+    </div>
+
+    <!-- Gradient Border Button -->
+    <div class="relative group">
+      <div class="absolute -inset-[1px] bg-gradient-to-r from-[#00f2fe] via-[#7000ff] to-[#ff9a9e] rounded-full opacity-100"></div>
+      <a href="booking.html" class="relative bg-surface-container-lowest text-primary font-label-sm text-label-sm px-6 py-2 rounded-full hover:bg-transparent transition-colors duration-300 block">
+        BOOK NOW
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-32 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto relative z-10">
+<!-- Page Header -->
+<div class="mb-16 md:mb-24 mt-12 md:mt-20 reveal-on-scroll">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">RESERVE <br>YOUR SEAT.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Experience precision grooming in our cinematic lounge. Select your preferred time and service below.</p>
+</div>
+
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative reveal-on-scroll">
+<!-- Booking Form Glass Panel (Spans 8 cols) -->
+<div class="lg:col-span-7 xl:col-span-8 glass-panel rounded-xl p-8 md:p-12 relative overflow-hidden group">
+<!-- Subtle glow effect inside panel -->
+<div class="absolute -top-32 -left-32 w-64 h-64 bg-secondary-container/20 rounded-full blur-[80px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-surface-variant pb-4">APPOINTMENT DETAILS</h2>
+<form class="space-y-6 relative z-10" id="bookingForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">FULL NAME</label>
+<input class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md" id="name" placeholder="John Doe" required type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">PHONE</label>
+<input class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md" id="phone" placeholder="+1 (555) 000-0000" required type="tel">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">EMAIL</label>
+<input class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md" id="email" placeholder="john@example.com" required type="email">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">DATE</label>
+<input class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md [color-scheme:dark]" id="date" required type="date">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">TIME</label>
+<input class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md [color-scheme:dark]" id="time" required type="time">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">SERVICE</label>
+<div class="relative">
+<select class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md appearance-none" id="service" required>
+<option disabled value="">Select a service...</option>
+<option value="Precision Haircut" selected>Precision Haircut (45m)</option>
+<option value="Executive Shave">Executive Hot Towel Shave (30m)</option>
+<option value="Beard Sculpting">Beard Sculpting (30m)</option>
+<option value="The Monolith Package">The Monolith Package (90m)</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">SPECIAL REQUESTS (OPTIONAL)</label>
+<textarea class="w-full glass-input rounded-DEFAULT px-4 py-3 font-body-md text-body-md resize-none" id="message" placeholder="Any specific details we should know?" rows="3"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-4 rounded-DEFAULT hover:bg-primary-container transition-all duration-300 flex justify-center items-center gap-3 group btn-hover-effect" id="submitBooking" type="button">
+<span>BOOK APPOINTMENT</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-4 text-center">Completing this form will open WhatsApp to confirm your slot.</p>
+</div>
+</form>
+</div>
+
+<!-- Contact Info & Map (Spans 4 cols) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-8">
+<!-- Contact Details Glass Card -->
+<div class="glass-panel rounded-xl p-8 relative overflow-hidden">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">CONNECT</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-surface-variant/50 p-3 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">DIRECT LINE</p>
+<a class="font-body-lg text-body-lg text-primary hover:text-secondary transition-colors block" href="tel:8529629979">8529629979</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-variant/50 p-3 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">ELECTRONIC</p>
+<a class="font-body-lg text-body-lg text-primary hover:text-secondary transition-colors block" href="mailto:book@monolithbarber.com">book@monolithbarber.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-variant/50 p-3 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">LOCATION</p>
+<p class="font-body-lg text-body-lg text-primary">124 High Street<br>Metropolis, NY 10001</p>
+</div>
+</div>
+<div class="flex items-start gap-4 pt-4 border-t border-surface-variant/50">
+<div class="bg-surface-variant/50 p-3 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">HOURS</p>
+<div class="font-body-md text-body-md text-primary flex justify-between gap-8">
+<span>Mon - Sat</span>
+<span>10:00 - 20:00</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant flex justify-between gap-8 mt-1">
+<span>Sunday</span>
+<span>Closed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Map Frame -->
+<a class="glass-panel rounded-xl overflow-hidden h-64 relative group cursor-pointer block" href="https://maps.google.com/?q=124+High+Street+Metropolis+NY+10001" target="_blank">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" data-alt="Stylized dark minimalist digital map." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIh2NQHVoD3JIE7ffvjJ8QG2Vs0rgGosOy0cYqOIlpw20SgZwjzGW0nHIDUYyGrPVzOkxJlIdfXpNJLn7RKmAgsG_CwL5awAOUsH2gvJROfZs1x1s5ygE27Z9ehO34dbPDwgQGPNRGxesHYBd85thhKK4rgHDHIAqfOn5c0CmbKrooeTCdDMR1g6fxS8I4Us5xJs0SWvpcN6S8RPMoVv573WByw6jHRSSexCPUN8HH999T1n-smFZwU18PrNy5LULG8fBestM2oo52" alt="Location map">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent flex items-end p-6">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-sm">directions</span>
+                            GET DIRECTIONS
+                        </div>
+</div>
+</a>
+</div>
+</div>
+</main>
+
+<!-- SideNavBar (Floating Action Buttons) -->
+<div class="fixed bottom-margin-desktop right-margin-desktop z-40 flex flex-col gap-4 hidden md:flex">
+<a class="bg-white/10 text-primary rounded-full p-4 hover:scale-110 transition-transform flex items-center justify-center group relative shadow-xl border border-white/20 backdrop-blur-xl" href="tel:8529629979">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="absolute right-full mr-4 bg-surface-container-high text-on-surface font-label-sm text-label-sm px-3 py-2 rounded-DEFAULT opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                CALL 8529629979
+            </span>
+</a>
+<a class="bg-primary text-on-primary rounded-full p-4 hover:scale-110 transition-transform flex items-center justify-center shadow-xl border border-white/20" href="https://wa.me/8529629979" target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</div>
+
+<!-- Floating Bottom Navigation (Mobile Only <768px) -->
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">home</span>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">content_cut</span>
+        <span>Services</span>
+    </a>
+    <a href="gallery.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">grid_view</span>
+        <span>Gallery</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item">
+        <span class="material-symbols-outlined">info</span>
+        <span>About</span>
+    </a>
+    <a href="booking.html" class="mobile-nav-item active">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span>Contact</span>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="grid grid-cols-12 gap-panel-gap px-margin-mobile md:px-margin-desktop py-20 w-full bg-surface-container-lowest/60 backdrop-blur-[30px] shadow-[0_-20px_50px_rgba(0,0,0,0.5)] border-t border-white/5 bg-gradient-to-t from-surface-dim to-transparent mt-auto relative z-20">
+<div class="col-span-12 md:col-span-4 flex flex-col gap-6">
+<div class="font-headline-lg text-headline-lg text-primary">&nbsp;BARBER</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                Precision grooming in a cinematic void. Elevate your standard.
+            </p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<div class="flex flex-col sm:flex-row gap-6 md:gap-12 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">INSTAGRAM</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">FACEBOOK</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">TERMS</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-all" href="#">PRIVACY</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 MONOLITH BARBER. PRECISION GROOMING. <span class="ml-2">MADE BY ANIL</span></div>
+</div>
+</footer>
+
+</body>
+</html>
