@@ -25,28 +25,23 @@
 <!-- Background Radial Glow -->
 <div class="fixed inset-0 z-[-1] bg-[#0D0D0D] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,90,75,0.1)_0%,_transparent_60%)]"></div>
 
-<!-- TopNavBar -->
-<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-fit hidden md:block">
-  <div class="flex items-center gap-8 px-8 py-3 bg-surface-container-lowest/60 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl">
-    <!-- Logo/Brand -->
-    <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary tracking-tighter cursor-pointer mr-4">BARBER</a>
-    
-    <!-- Navigation Links -->
-    <div class="hidden md:flex items-center gap-8 font-body-md text-body-md tracking-widest">
-      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="index.html">HOME</a>
-      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="services.html">SERVICES</a>
-      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="gallery.html">GALLERY</a>
-      <a class="text-on-surface-variant/80 hover:text-primary transition-colors duration-300" href="about.html">ABOUT</a>
-      <a class="bg-white/10 text-primary px-4 py-2 rounded-full transition-colors duration-300" href="booking.html">BOOKING</a>
+<!-- TopNavBar (Identical to About Us page) -->
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-fit hidden md:block">
+  <div class="glass-panel backdrop-blur-xl rounded-full px-8 py-3 flex items-center gap-8 border border-white/20 shadow-2xl">
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">HOME</a>
+      <a href="services.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">SERVICES</a>
+      <a href="gallery.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">GALLERY</a>
+      <a href="about.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">ABOUT</a>
+      <a href="booking.html" class="font-body-md text-body-md tracking-widest text-on-surface-variant/80 hover:text-primary transition-colors">BOOKING</a>
     </div>
-
-    <!-- Gradient Border Button -->
-    <div class="relative group">
-      <div class="absolute -inset-[1px] bg-gradient-to-r from-[#00f2fe] via-[#7000ff] to-[#ff9a9e] rounded-full opacity-100"></div>
-      <a href="booking.html" class="relative bg-surface-container-lowest text-primary font-label-sm text-label-sm px-6 py-2 rounded-full hover:bg-transparent transition-colors duration-300 block">
-        BOOK NOW
-      </a>
-    </div>
+    <div class="h-4 w-px bg-white/10"></div>
+    <a href="booking.html" class="relative group block">
+      <div class="absolute -inset-0.5 bg-gradient-to-r from-[#00f2fe] via-[#7000ff] to-[#ff8a00] rounded-full opacity-100 group-hover:opacity-80 transition duration-300"></div>
+      <div class="relative px-6 py-2 bg-surface rounded-full flex items-center">
+        <span class="font-label-sm text-label-sm text-primary uppercase">BOOK NOW</span>
+      </div>
+    </a>
   </div>
 </nav>
 
