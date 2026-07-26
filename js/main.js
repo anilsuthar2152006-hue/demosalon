@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. Highlight Active Navigation Items (Desktop & Mobile)
-    // Desktop nav links
     document.querySelectorAll('nav a, header a').forEach(navLink => {
         const href = navLink.getAttribute('href');
         if (href === activePage || (activePage === 'index.html' && (href === 'index.html' || href === '#'))) {
@@ -82,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroCard = document.getElementById('hero-card') || document.querySelector('.parallax-element');
     if (heroCard) {
         document.addEventListener('mousemove', (e) => {
-            if (window.innerWidth < 768) return; // Skip parallax on touch/mobile for better performance
+            if (window.innerWidth < 768) return;
             const xAxis = (window.innerWidth / 2 - e.clientX) / 45;
             const yAxis = (window.innerHeight / 2 - e.clientY) / 45;
             heroCard.style.transform = `translate3d(${xAxis}px, ${yAxis}px, 0)`;
@@ -153,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const serviceSelect = document.getElementById('service');
         const messageInput = document.getElementById('message');
 
-        // Check required fields
         if (bookingForm && !bookingForm.checkValidity()) {
             bookingForm.reportValidity();
             return;
@@ -167,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const service = serviceSelect ? (serviceSelect.options[serviceSelect.selectedIndex]?.text || serviceSelect.value) : 'General Service';
         const message = messageInput ? messageInput.value : '';
 
-        // Construct formatted WhatsApp message
         let waMsg = `*NEW APPOINTMENT REQUEST*\n\n`;
         if (name) waMsg += `*Name:* ${name}\n`;
         if (phone) waMsg += `*Phone:* ${phone}\n`;
@@ -189,9 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
         bookingForm.addEventListener('submit', handleBooking);
     }
 
-    // Pre-select service from URL query params (e.g., booking.html?service=Precision+Cut)
     const urlParams = new URLSearchParams(window.location.search);
     const serviceParam = urlParams.get('service');
+    const serviceSelect = document.getElementById('service');
     if (serviceParam && serviceSelect) {
         for (let i = 0; i < serviceSelect.options.length; i++) {
             if (serviceSelect.options[i].value.toLowerCase().includes(serviceParam.toLowerCase()) || 
@@ -205,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 8. Gallery Lightbox Modal Setup
     const galleryImages = document.querySelectorAll('main img');
     if (galleryImages.length > 0) {
-        // Create modal element
         const modal = document.createElement('div');
         modal.className = 'lightbox-modal';
         modal.innerHTML = `
@@ -239,5 +235,75 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeModal();
         });
+    }
+
+    // 9. Floating Draggable Call Button Logic
+    const callBtn = document.getElementById('draggableCallBtn');
+    if (callBtn) {
+        let isDragging = false;
+        let startX = 0, startY = 0;
+        let initialLeft = 0, initialTop = 0;
+        let hasMoved = false;
+
+        const onStart = (e) => {
+            isDragging = true;
+            hasMoved = false;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            
+            const rect = callBtn.getBoundingClientRect();
+            startX = clientX;
+            startY = clientY;
+            initialLeft = rect.left;
+            initialTop = rect.top;
+
+            callBtn.style.bottom = 'auto';
+            callBtn.style.right = 'auto';
+            callBtn.style.left = `${initialLeft}px`;
+            callBtn.style.top = `${initialTop}px`;
+            callBtn.style.transition = 'none';
+        };
+
+        const onMove = (e) => {
+            if (!isDragging) return;
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+            const deltaX = clientX - startX;
+            const deltaY = clientY - startY;
+
+            if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+                hasMoved = true;
+            }
+
+            let newLeft = initialLeft + deltaX;
+            let newTop = initialTop + deltaY;
+
+            const maxLeft = window.innerWidth - callBtn.offsetWidth - 10;
+            const maxTop = window.innerHeight - callBtn.offsetHeight - 10;
+
+            newLeft = Math.max(10, Math.min(newLeft, maxLeft));
+            newTop = Math.max(10, Math.min(newTop, maxTop));
+
+            callBtn.style.left = `${newLeft}px`;
+            callBtn.style.top = `${newTop}px`;
+        };
+
+        const onEnd = (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            callBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+            if (hasMoved && e.cancelable) {
+                e.preventDefault();
+            }
+        };
+
+        callBtn.addEventListener('mousedown', onStart);
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('mouseup', onEnd);
+
+        callBtn.addEventListener('touchstart', onStart, { passive: true });
+        document.addEventListener('touchmove', onMove, { passive: false });
+        document.addEventListener('touchend', onEnd);
     }
 });
