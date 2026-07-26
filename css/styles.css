@@ -342,3 +342,10 @@ body.page-exiting {
     transform: scale(1);
 }
 
+/* Mobile: 19px bottom padding on all pages */
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 19px;
+    }
+}
+
